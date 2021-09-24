@@ -8,7 +8,17 @@ computerPlay = function() {
     return weapons[Math.floor(Math.random() * weapons.length)];
 }
 //Create a function to play a single game following two parameters-- 
-//playerSelection() and computerSelection()
+//playerSelection and computerSelection
+function playRound(playerSelection, computerSelection) {
+    let weapon = prompt("Choose your weapon! Rock, paper, or scissors...");
+    alert("Your weapon of choice is " + weapon);
+
+    computerPlay()
+  }
+  
+  const playerSelection = "rock";
+  const computerSelection = computerPlay();
+  console.log(playRound(playerSelection, computerSelection));
 
 //and then return a string that declares the winner of the round like,
 //'You Lose! Paper beats Rock"
