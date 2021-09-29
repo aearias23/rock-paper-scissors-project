@@ -14,9 +14,10 @@ function computerPlay() {
 const computerSelection = computerPlay();
 let playerSelection = 'rock';
 
-function playRound(playerSelection, computerSelection) {
+let playRound = function (playerSelection, computerSelection) {
     if (playerSelection === computerSelection)
         roundWinner = 'tie'
+        return playerSelection + " VS " + computerSelection + "."
     } 
     if (
         (playerSelection === 'rock' && computerSelection === 'scissors') ||
@@ -26,7 +27,6 @@ function playRound(playerSelection, computerSelection) {
      {
         playerScore++
         roundWinner = 'player'
-        return playerSelection + " VS " + computerSelection + ". You win!"
     }
     if (
         (computerSelection === 'rock' && playerSelection === 'scissors') ||
