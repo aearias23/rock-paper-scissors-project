@@ -12,39 +12,42 @@ function computerPlay() {
 //Create a function to play a single game following two parameters-- 
 //computerSelection and playerSelection 
 const computerSelection = computerPlay();
-let playerSelection = 'rock';
+const playerSelection = prompt();
 
-let playRound = function (playerSelection, computerSelection) {
-    if (playerSelection === computerSelection)
-        roundWinner = 'tie'
-        return playerSelection + " VS " + computerSelection + "."
-    } 
+function playRound(playerSelection, computerSelection) {
+    if (playerSelection === computerSelection);
+    roundWinner = 'tie';
+}
     if (
-        (playerSelection === 'rock' && computerSelection === 'scissors') ||
-        (playerSelection === 'scissors' && computerSelection === 'paper') ||
-        (playerSelection === 'paper' && computerSelection === 'rock')
-        )
-     {
-        playerScore++
-        roundWinner = 'player'
+        (playerSelection==='rock' && computerSelection==='scissors') ||
+        (playerSelection==='paper' && computerSelection==='rock') ||
+        (playerSelection==='scissors' && computerSelection==='paper') 
+    );
+    {
+        roundWinner = 'player';
     }
-    if (
-        (computerSelection === 'rock' && playerSelection === 'scissors') ||
-        (computerSelection === 'scissors' && playerSelection === 'paper') ||
-        (computerSelection === 'paper' && playerSelection === 'rock')
-    ) {
-        computerScore++
-        roundWinner = 'computer'
+    if(
+        (playerSelection==='rock' && computerSelection==='paper') ||
+        (playerSelection==='paper' && computerSelection==='scissors') ||
+        (playerSelection==='scissors' && computerSelection==='rock')
+    );
+    {
+        roundWinner = 'computer';
     }
+function winnerDeclaration() {
+  if (roundWinner = 'tie')
+    console.log( playerSelection + ' VS ' + computerSelection + '. It\'s a tie!');
+} if (roundWinner = 'player') {
+    console.log( playerSelection + ' VS ' + computerSelection + '. You win!' );
+} if (roundWinner = 'computer') {
+    console.log( playerSelection + ' VS ' + computerSelection + '. You lose!' );
+}
+
+
 //and then return a string that declares the winner of the round like,
 //'You Lose! Paper beats Rock"
-
 // Make the function's playerSelection parameter case-insensitve.
-
 //Make a new function, game(). Put the previous function into this one to
 //play a 5 round game that keeps score and reports a winner or loser.
-
-
 //Perfect time to learn loops. You can also call playRound() function.
-
 //use prompt() to input data from user.
