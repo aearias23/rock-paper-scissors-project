@@ -34,13 +34,13 @@ function playRound(playerSelection, computerSelection) {
     {
         roundWinner = 'computer';
     }
-function winnerDeclaration() {
-  if (roundWinner = 'tie')
-    console.log( playerSelection + ' VS ' + computerSelection + '. It\'s a tie!');
-} if (roundWinner = 'player') {
-    console.log( playerSelection + ' VS ' + computerSelection + '. You win!' );
-} if (roundWinner = 'computer') {
-    console.log( playerSelection + ' VS ' + computerSelection + '. You lose!' );
+
+if (roundWinner = 'player') {
+    greeting =  playerSelection + ' VS ' + computerSelection + '. You win!';
+}  else if (roundWinner = 'computer') {
+    greeting = playerSelection + ' VS ' + computerSelection + '. You lose!';
+} else {
+    greeting = playerSelection + ' VS ' + computerSelection + '. It\'s a tie!';
 }
 
 
