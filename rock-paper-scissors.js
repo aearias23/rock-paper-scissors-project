@@ -1,14 +1,12 @@
 //I am making a rock paper scissors game.
-//In the HTML file I need to figure out how to have the user input the data.
+
 let playerScore = 0
 let computerScore = 0
 let roundWinner = ''
 //Create an array with 'rock', 'paper', and 'scissors'.
-const weapons = ['rock', 'paper', 'scissors'];
+const weapons = ['rock', 'paper', 'scissors', 'ROCK', 'PAPER', 'SCISSORS'];
 // Make the function's playerSelection parameter case-insensitve.
-const weaponsCapitalized = ['ROCK', 'PAPER', 'SCISSORS'];
-weapons === weaponsCapitalized;
-weapons.toUpperCase() === weaponsCapitalized.toUpperCase();
+
 //Have the function select rock, paper, scissors randomly
 function computerPlay() {
     return weapons[Math.floor(Math.random() * weapons.length)];
@@ -17,8 +15,6 @@ function computerPlay() {
 //computerSelection and playerSelection 
 const computerSelection = computerPlay();
 const playerSelection = prompt('Choose yoour weapon! Rock, paper, scissors.');
-
-
 
 function playRound(playerSelection, computerSelection) {
     if (playerSelection === computerSelection);
@@ -48,6 +44,7 @@ if (
     (playerSelection==='scissors' && computerSelection==='paper')
 ) 
 {
+//In the HTML file I need to figure out how to have the user input the data.
     document.getElementById("demo").innerHTML = playerSelection + ' VS ' 
             + computerSelection + '. You win!';
 }  else if (
