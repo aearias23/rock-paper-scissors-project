@@ -9,18 +9,12 @@ function computerPlay() {
     return weapons[Math.floor(Math.random() * weapons.length)];
 }
 //Create a function to play a single game following two parameters-- 
-//computerSelection and playerSelection 
-//let computerSelection = computerPlay();
-//let playerSelection = prompt('Choose your weapon! Rock, paper, scissors.');
-let playerScore = 0;
-let computerScore = 0;
+//computerSelection and playerSelection
+let computerSelection = computerPlay();
 let roundWinner = '';
 
-function playRound(playerSelection, computerSelection) {
-
-    let computerSelection = computerPlay();
-    let playerSelection = prompt('Choose your weapon! Rock, paper, scissors.');
-
+function playRound(computerSelection) {
+    const playerSelection = prompt('Choose your weapon! Rock, paper, scissors.');
     if (playerSelection === computerSelection) {
         
         roundWinner = 'It\'s a tie!';
@@ -50,30 +44,14 @@ function playRound(playerSelection, computerSelection) {
 }
 //Make a new function, game(). Put the previous function into this one to
 //play a 5 round game that keeps score and reports a winner or loser.
+
 function game() {
-    let playerScore = 5;
-    let computerScore = 5;
-    let i = 0;
-    playRound(playerSelection, computerSelection);
-    const scoreCard = document.querySelector('h2');
-    
-
-    while (i < playerScore || computerScore) {
-        i++
-        game();
-    }
-
-    let announceWinner = function() {
-        if (playerScore === 5) {
-            document.write('You have won five rounds. Return home, warrior. You have done enough.')
-        } else if (computerScore === 5) {
-            document.write('You have lost five rounds. Rest now, warrior. Thank you for your sacrifce.')
-        }
-    }
-
-    scoreCard.textContent = announceWinner;
+    let playerScore = 0;
+    let computerScore = 0;
+    for (let i = 0; i <= playerScore === 5 || computerScore === 5; i++)
+    playRound(computerSelection);
 }
 
-console.log(playRound(playerSelection, computerSelection));
+console.log(playRound(computerSelection));
 //Perfect time to learn loops. You can also call playRound() function.
 //use prompt() to input data from user.
